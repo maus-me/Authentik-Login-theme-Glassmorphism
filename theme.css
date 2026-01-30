@@ -7,8 +7,12 @@
 }
 
 
-:host(ak-library-impl)
-{
+
+
+
+
+
+:host(ak-library-impl) {
     max-width: 90rem !important;
     display: block !important;
     margin-left: auto !important;
@@ -206,7 +210,7 @@ body:has(.pf-c-login) .pf-c-form__group-control {
     margin-top: 25px !important;
     justify-content: space-between !important;
     overflow: visible !important;
-    padding: 5px !important;
+    /* padding: 5px !important; */
 }
 
 /* Base button styles */
@@ -228,7 +232,7 @@ body:has(.pf-c-login) button[type="button"],
     position: relative !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
-    min-width: 120px !important;
+    /* min-width: 120px !important; */
     cursor: pointer !important;
     outline: none !important;
 }
@@ -624,18 +628,7 @@ span:contains("Powered by") {
 }
 
 /* If it's in a <ul> list in footer */
-.pf-c-login__footer .pf-c-list.pf-m-inline,
-ul.pf-c-list.pf-m-inline li span:contains("authentik") {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Fallback selector: hide all brand links elements */
-ak-brand-links,
-.pf-c-login__footer .pf-c-login__footer .pf-c-list li:last-child,
-*[data-ouia-component-type="PF4/Footer"],
-ul.pf-c-list.pf-m-inline,
-.pf-c-list.pf-m-inline {
+ul.pf-c-list.pf-m-inline li span {
     display: none !important;
     visibility: hidden !important;
 }
@@ -679,45 +672,45 @@ body:has(.pf-c-login) {
 }
 
 /* Login Container with Glass effect */
-.pf-c-login .pf-c-login__container {
-    background: rgba(255, 255, 255, 0.03),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E") !important;
-    backdrop-filter: blur(40px) !important;
-    -webkit-backdrop-filter: blur(40px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 24px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
-    padding: 40px !important;
-    /* Reduced padding */
-    /* Desktop default: 450px min-width */
-    min-width: 450px !important;
-    /* Combined with max-width for responsiveness */
-    width: 100% !important;
-    max-width: 700px !important;
-    transition: all 0.3s ease !important;
-    position: relative !important;
+/*.pf-c-login .pf-c-login__container {*/
+/*    background: rgba(255, 255, 255, 0.03),*/
+/*    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E") !important;*/
+/*    backdrop-filter: blur(40px) !important;*/
+/*    -webkit-backdrop-filter: blur(40px) !important;*/
+/*    border: 1px solid rgba(255, 255, 255, 0.1) !important;*/
+/*    border-radius: 24px !important;*/
+/*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),*/
+/*    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;*/
+/*    padding: 40px !important;*/
+/*    !* Reduced padding *!*/
+/*    !* Desktop default: 450px min-width *!*/
+/*    min-width: 450px !important;*/
+/*    !* Combined with max-width for responsiveness *!*/
+/*    width: 100% !important;*/
+/*    max-width: 700px !important;*/
+/*    transition: all 0.3s ease !important;*/
+/*    position: relative !important;*/
 
-    /* THE MAGICAL FIX: Safe Centering */
-    margin: auto !important;
+/*    !* THE MAGICAL FIX: Safe Centering *!*/
+/*    margin: auto !important;*/
 
-    /* STRICT SIZING: Prevent stretching */
-    height: auto !important;
-    flex-grow: 0 !important;
-    flex-shrink: 0 !important;
-    flex-basis: auto !important;
+/*    !* STRICT SIZING: Prevent stretching *!*/
+/*    height: auto !important;*/
+/*    flex-grow: 0 !important;*/
+/*    flex-shrink: 0 !important;*/
+/*    flex-basis: auto !important;*/
 
-    max-height: none !important;
-    overflow: visible !important;
+/*    max-height: none !important;*/
+/*    overflow: visible !important;*/
 
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
+/*    display: flex !important;*/
+/*    flex-direction: column !important;*/
+/*    justify-content: center !important;*/
 
-    /* NUCLEAR SAFEGUARD */
-    align-self: center !important;
-    justify-self: center !important;
-}
+/*    !* NUCLEAR SAFEGUARD *!*/
+/*    align-self: center !important;*/
+/*    justify-self: center !important;*/
+/*}*/
 
 /* Login Content */
 .pf-c-login .pf-c-login__main {
@@ -830,14 +823,13 @@ ak-loading-overlay {
     background-color: transparent;
 }
 
-.pf-c-input-group.ak-stage-identification > *.ak-stage-identification + *.ak-stage-identification
-{
+.pf-c-input-group.ak-stage-identification>*.ak-stage-identification+*.ak-stage-identification {
     margin-left: 10px !important;
 }
 
 /* Form Inputs - Shadow DOM targeted */
-input[name="uidField"],
-input[type="password"],
+input[id="ak-identifier-input"],
+input[id="ak-stage-identification-password"],
 input[id="validation-code-input"],
 :host(ak-stage-identification) .pf-c-form-control,
 :host(ak-stage-password) .pf-c-form-control,
@@ -994,7 +986,8 @@ input[id="validation-code-input"],
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 14px !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(10px) !important;;
+    backdrop-filter: blur(10px) !important;
+;
     transition: all 0.3s ease !important;
     font-weight: 500 !important;
     margin-top: 10px !important;
@@ -1139,7 +1132,8 @@ input[id="validation-code-input"],
     border-radius: 20px !important;
     background: rgba(255, 255, 255, 0.08) !important;
     backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+;
     transition: all 0.3s ease-in-out !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
@@ -1193,7 +1187,7 @@ input[id="validation-code-input"],
     box-shadow: none !important;
 }
 
-.pf-c-page > .pf-c-page__header {
+.pf-c-page>.pf-c-page__header {
     background: rgba(0, 0, 0, 0.4) !important;
     backdrop-filter: blur(18px) !important;
     -webkit-backdrop-filter: blur(18px) !important;
@@ -1290,15 +1284,15 @@ input[id="validation-code-input"],
 .pf-c-button.pf-m-control {
     position: absolute !important;
     top: 50% !important;
-    right: 5px !important;
+    margin-left: 5px !important;
     transform: translateY(-50%) !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     /* Very high z-index to stay above focused inputs */
     z-index: 9999 !important;
-    padding: 5px !important;
-    margin: 0 !important;
+    /* padding: 5px !important; */
+    /* margin: 0 !important; */
     height: auto !important;
     min-width: 0 !important;
     width: 30px !important;
@@ -1519,11 +1513,11 @@ input[id="validation-code-input"],
     --pf-c-table--BackgroundColor: transparent !important;
 }
 
-:host(ak-user-session-list) .pf-c-table tbody > tr > *,
-:host(ak-user-settings-mfa) .pf-c-table tbody > tr > *,
-:host(ak-user-consent-list) .pf-c-table tbody > tr > *,
-:host(ak-user-reputation-list) .pf-c-table tbody > tr > *,
-:host(ak-user-token-list) .pf-c-table tbody > tr > * {
+:host(ak-user-session-list) .pf-c-table tbody>tr>*,
+:host(ak-user-settings-mfa) .pf-c-table tbody>tr>*,
+:host(ak-user-consent-list) .pf-c-table tbody>tr>*,
+:host(ak-user-reputation-list) .pf-c-table tbody>tr>*,
+:host(ak-user-token-list) .pf-c-table tbody>tr>* {
     --pf-c-table--cell--BackgroundColor: transparent !important;
     border-bottom-color: rgba(255, 255, 255, 0.1) !important;
 }
@@ -1671,8 +1665,7 @@ ak-chip {
 :host(ak-user-settings-mfa) ak-chip::part(chip),
 :host(ak-user-session-list) ak-chip::part(chip),
 :host(ak-user-reputation-list) ak-chip::part(chip) {
-    background: #333333 !important;
-    background-image: none !important;
+    background: #333333 none !important;
     color: white !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 12px !important;
@@ -1804,16 +1797,14 @@ ak-app-icon::part(icon image) {
     font-weight: 400 !important;
 
     /* The Line Trick: Solid White & Balanced Gap for "Continuer avec" */
+    background-size: 100% 1px !important;
     background: linear-gradient(to right,
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 1) 32%,
     transparent 32%,
     transparent 68%,
     rgba(255, 255, 255, 1) 68%,
-    rgba(255, 255, 255, 1) 100%) !important;
-    background-size: 100% 1px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    rgba(255, 255, 255, 1) 100%) no-repeat center !important;
 }
 
 .pf-c-login__main-footer-links-item-link {
@@ -1967,7 +1958,7 @@ ak-app-icon::part(icon image) {
 
 /* Hide "My Applications" at top of screen */
 :host(ak-library-impl) h1.pf-c-page__title {
-    display:none;
+    display: none;
 }
 
 /* Float to center of page */
@@ -1979,8 +1970,20 @@ ak-app-icon::part(icon image) {
     justify-content: center;
 }
 
+/* Width Rounding Fix */
+fieldset[part="app-group"] {
+    width: round(down, 100%, calc(var(--app-card-min-width) + var(--pf-global--spacer--md) / var(--app-list-column-count, 1)));
+
+    @media (max-width: 767px) {
+        width: auto !important;
+    }
+}
+
 :host(ak-library-impl) legend.pf-c-content {
     width: 100%;
+    @media (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
