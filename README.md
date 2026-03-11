@@ -1,6 +1,6 @@
 # Authentik Login-theme: Glassmorphism ✨
 
-A custom **glassmorphism** login theme for [Authentik](https://goauthentik.io/), designed by **VULGA**.
+A custom **glassmorphism** login theme for [Authentik](https://goauthentik.io/), originally designed by **VULGA**.  Improved and optimized by **maus-me**.
 
 > ✅ Tested and fully compatible with **Authentik version 2025.10.3** (Latest)
 
